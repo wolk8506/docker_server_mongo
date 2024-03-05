@@ -5,7 +5,7 @@ const app = require("../app");
 const { DB_HOST = "mongodb://localhost:27019/", PORT = 4000 } = process.env;
 
 mongoose
-  .connect(DB_HOST)
+  .connect("mongodb://localhost:27019/")
   .then(() => console.log("Database connection successful"))
   .then(() =>
     app.listen(PORT, () => {
